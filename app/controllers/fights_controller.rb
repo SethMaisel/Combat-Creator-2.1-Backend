@@ -2,7 +2,7 @@ class FightsController < ApplicationController
 
     def index
         fights = Fight.all 
-        render json: fights, include:[:sequences]
+        render json: fights, include:[:sequences, :characters, :weapons, :movements, :techniques, :lines]
     end
     
     def show
