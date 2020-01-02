@@ -2,12 +2,12 @@ class TechniquesController < ApplicationController
 
     def index
         techniques = Technique.all 
-        render json: moves
+        render json: techniques
     end
 
     def show
         technique = Technique.find(params [:id])
-        render json: move
+        render json: technique
     end
 
     def create

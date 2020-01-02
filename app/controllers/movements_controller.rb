@@ -2,7 +2,7 @@ class MovementsController < ApplicationController
 
     def index
         movements = Movement.all 
-        render json: movesment
+        render json: movements
     end
 
     def show
