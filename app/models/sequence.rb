@@ -1,8 +1,8 @@
 class Sequence < ApplicationRecord
-  belongs_to :Fight
-  belongs_to :Character
-  belongs_to :Weapon
-  belongs_to :Technique
-  belongs_to :Movement
-  belongs_to :Line
+  belongs_to :fight
+  belongs_to :character
+  belongs_to :weapon
+  belongs_to :technique
+  belongs_to :movement
+  belongs_to :line
 end

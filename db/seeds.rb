@@ -158,3 +158,11 @@ hand_parry = Technique.create(name: "Hand-Parry")
 grab_arm = Technique.create(name: "Grab-Arm")
 grab_blade = Technique.create(name: "Grab-Blade")
 switch_hand = Technique.create(name: "Switch Weapon to Other Hand")
+
+sequence1 = Sequence.create(
+    fight: fight1, 
+    character: mercutio, 
+    weapon: rapier, 
+    movement: advance, 
+    line: head, 
+    technique: cut)
