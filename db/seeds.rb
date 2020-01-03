@@ -75,10 +75,10 @@ left_knee = Line.create(line: "Left Knee")
 right_knee = Line.create(line: "Right Knee")
 left_foot = Line.create(line: "Left Foot")
 right_foot = Line.create(line: "Right Foot")
-descending_diagonal_cut_left = Line.create(line: "Decending-Diagonal-Cut (Left-to-Right")
-descending_diagonal_cut_right = Line.create(line: "Decending-Diagonal-Cut (Right-to-Left")
-ascending_diagonal_cut_left = Line.create(line: "Ascending-Diagonal-Cut (Left-to-Right")
-ascending_diagonal_cut_right = Line.create(line: "Ascending-Diagonal-Cut (Right-to-Left")
+descending_diagonal_left = Line.create(line: "Decending-Diagonal (Left-to-Right)")
+descending_diagonal_right = Line.create(line: "Decending-Diagonal (Right-to-Left)")
+ascending_diagonal_left = Line.create(line: "Ascending-Diagonal (Left-to-Right)")
+ascending_diagonal_right = Line.create(line: "Ascending-Diagonal (Right-to-Left)")
 
 advance = Movement.create(name: "Advance")
 retreat = Movement.create(name: "Retreat")
@@ -178,5 +178,5 @@ sequence3 = Sequence.create(
     character: tybalt, 
     weapon: rapier, 
     movement: balestra, 
-    line: descending_diagonal_cut_left, 
-    technique: wound)
+    line: descending_diagonal_left, 
+    technique: cut)
