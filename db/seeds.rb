@@ -166,3 +166,17 @@ sequence1 = Sequence.create(
     movement: advance, 
     line: head, 
     technique: cut)
+sequence2 = Sequence.create(
+    fight: fight1, 
+    character: tybalt, 
+    weapon: rapier, 
+    movement: retreat, 
+    line: high_outside, 
+    technique: circle_beat)
+sequence3 = Sequence.create(
+    fight: fight1, 
+    character: tybalt, 
+    weapon: rapier, 
+    movement: balestra, 
+    line: descending_diagonal_cut_left, 
+    technique: wound)
