@@ -9,4 +9,22 @@ class CharactersController < ApplicationController
         character = Character.find(params [:id])
         render json: character
     end
+
+    def create
+        character = Character.create(
+            name: params[:name],
+            # user_id: params[:user_id]
+            )
+        render json: character
+    end
+
+    def update
+        character = Character.find(params[:id])
+        character.update(
+            name: params[:name],
+            # user_id: params[:user_id]
+            )
+        render json: character
+    end
+
 end
