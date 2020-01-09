@@ -26,9 +26,10 @@ class SequencesController < ApplicationController
     end
 
     def create
+        # byebug
         sequence = Sequence.create(
             fight_id: params[:fight_id],
-            character_id: params[:character_id],
+            character: params[:name],
             weapon_id: params[:weapon_id],
             movement_id: params[:movement_id],
             technique_id: params[:technique_id],
@@ -41,7 +42,7 @@ class SequencesController < ApplicationController
         sequence = Sequence.find(params[:id])
         sequences.update(
             fight_id: params[:fight_id],
-            character_id: params[:character_id],
+            character: params[:name],
             weapon_id: params[:weapon_id],
             movement_id: params[:movement_id],
             technique_id: params[:technique_id],
