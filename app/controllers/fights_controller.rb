@@ -9,9 +9,8 @@ class FightsController < ApplicationController
             :movement, 
             :technique, 
             :line
-                ]
-            }
-        }
+            ]
+        }}
     end
     
     def show

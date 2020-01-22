@@ -29,13 +29,20 @@ class SequencesController < ApplicationController
         # byebug
         sequence = Sequence.create(
             fight_id: params[:fight_id],
-            character: params[:name],
+            character_id: params[:character_id],
             weapon_id: params[:weapon_id],
             movement_id: params[:movement_id],
             technique_id: params[:technique_id],
             line_id: params[:line_id]
             )
-        render json: sequence
+        render json: sequence, include:[
+            :fight, 
+            :character, 
+            :movement, 
+            :weapon, 
+            :technique,
+            :line
+        ]
     end
 
     def update
