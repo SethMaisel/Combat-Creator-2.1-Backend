@@ -20,10 +20,10 @@ class FightsController < ApplicationController
 
     def create
         fight = Fight.create(
-            name: params[:name],
+            name: params[:name], 
             # user_id: params[:user_id]
             )
-        render json: fight
+        render json: fight, include:[:sequences]
     end
 
     def update
