@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
 Sequence.destroy_all
 Fight.destroy_all
 Character.destroy_all
@@ -13,11 +14,13 @@ Technique.destroy_all
 Line.destroy_all
 Movement.destroy_all
 
-fight1 = Fight.create(name: "R&J one")
-fight2 = Fight.create(name: "R&J two")
-fight3 = Fight.create(name: "Lear one")
-fight4 = Fight.create(name: "Musketeers one")
-fight5 = Fight.create(name: "Musketeers two")
+user1 = User.create(username: "Seth", email: "email@email.com", password: "password")
+
+fight1 = Fight.create(name: "R&J one", user: user1)
+fight2 = Fight.create(name: "R&J two", user: user1)
+fight3 = Fight.create(name: "Lear one", user: user1)
+fight4 = Fight.create(name: "Musketeers one", user: user1)
+fight5 = Fight.create(name: "Musketeers two", user: user1)
 
 mercutio = Character.create(name: "Mercutio")
 tybalt = Character.create(name: "Tybalt")

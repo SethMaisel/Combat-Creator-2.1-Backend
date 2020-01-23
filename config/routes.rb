@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :users, only: [:create]
-    post '/login', to: 'auth#create'
+  resources :users, only: [:create, :index, :show]
+    post '/login', to: 'authentication#login'
     get '/profile', to: 'users#profile'
      
   resources :sequences

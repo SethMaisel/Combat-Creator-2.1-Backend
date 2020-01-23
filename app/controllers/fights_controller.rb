@@ -15,7 +15,8 @@ class FightsController < ApplicationController
     
     def show
         fight = Fight.find(params [:id])
-        render json: fight, include:[:user]
+        render json: fight 
+        
     end
 
     def create
@@ -23,13 +24,14 @@ class FightsController < ApplicationController
             name: params[:name], 
             user_id: params[:user_id]
             )
+            
         render json: fight, include:[:sequences]
     end
 
     def update
         fight = Fight.find(params[:id])
         fight.update(
-            name: params[:name],
+            name: params[:name]
             # user_id: params[:user_id]
             )
         render json: fight
