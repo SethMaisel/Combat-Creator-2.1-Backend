@@ -3,7 +3,8 @@ class AuthenticationController < ApplicationController
         before_action :set_user, only: [:login]
       
         def login
-          # user = User.find_by(username: params[:username])
+            
+          user = User.find_by(username: params[:user][:username])
           if(!@user)
             render json: { error: 'Invalid username' }, status: :unauthorized
           elsif @user.authenticate(params[:user][:password])
@@ -24,6 +25,7 @@ class AuthenticationController < ApplicationController
       
         private
         def set_user
+         
           @user = User.find_by(username: params[:user][:username] )
         end
       
